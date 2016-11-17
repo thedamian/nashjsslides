@@ -13,7 +13,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-		<link rel="icon" href="http://moontoast-marketing.s3.amazonaws.com/favicon.ico">
+		<link rel="icon" href="images/RJA-Badge.png">
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
@@ -51,6 +51,10 @@
 			box-shadow: none;
 		}
 
+		.reveal .monospace {
+            font-family: monospace;
+        }
+
 		</style>
 
 		<!--[if lt IE 9]>
@@ -64,9 +68,9 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Why I'm not a JavaScript developer</h1>
-					<h3>The dreaded interview questions...</h3>
+				<section data-background="images/financial.jpg">
+					<h1 class="monospace">Fizz Buzzkill...</h1>
+					<h3>Answering dreaded JS interview questions...</h3>
 					<p>
 						<small>Created by <a href="http://russelljanderson.com">Russ Anderson</a> / <a href="http://twitter.com/RealRealRuss">@RealRealRuss</a></small>
 					</p>
@@ -82,30 +86,28 @@
 						<div class="custom_column">
 							<h2>Me</h2>
 							<ul>
-								<li>husband, father of ~2</li>
+								<li>husband, father of 2 boys</li>
+								<li>Nashville (Inglewood)</li>
 								<li>Christian, member of Midtown Fellowship</li>
-								<li>Inglewood</li>
 								<li>terrible golfer</li>
 								<li><a href="http://twitter.com/RealRealRuss" target="_blank">@RealRealRuss</a></li>
 							</ul>
 						</div>
 					</section>
 					<section>
-						<p><img class="custom_transparent" src="images/lockup-horizontal-white.png"></p>
-						<p>Advocacy Marketing platform</p>
-						<p><img class="custom_transparent" src="https://moontoast-marketing.s3.amazonaws.com/home/AdvocatePlatforms.png"></p>
+						<p><img class="custom_transparent" src="images/simply-agree.png"></p>
+						<p>Making transactions simple</p>
 						<aside class="notes">
 							provide ways for fans of your brand to help spread the word about what you're doing
 						</aside>
 					</section>
-					<section>
+					<section data-background="images/tools.jpg">
 						<h2>Front-end Developer</h2>
-						<ul>
-							<li class="fragment">I actually AM a JavaScript Developer</li>
-							<li class="fragment">full time ~4 years</li>
-							<li class="fragment">mostly self-taught / colleague-taught</li>
-							<li class="fragment">no computer science background</li>
-							<li class="fragment">mostly working within libraries and frameworks</li>
+						<ul class="fragment">
+							<li>full time 5 years</li>
+							<li>mostly self-taught / colleague-taught</li>
+							<li>no computer science background</li>
+							<li>mostly working within libraries and frameworks</li>
 						</ul>
 						<aside class="notes">
 							Bait and switch! can mention jquery and backbone, but don't get ahead of yourself here talking about limited JS knowledge, wait for HTML5 boilerplate<br><br>
@@ -146,23 +148,28 @@
 				</section>
 
 				<section>
-					<section>
-						<h2>Several basic JS questions that<br> I couldn't simply answer</h2>
-						<p class="fragment">I'm probably not alone</p>
-						<ul class="fragment">
-							<li>I'll answer a few</li>
-							<li>succinct explanation</li>
-							<li>real world application</li>
-							<!--<li>additional resources</li>-->
-						</ul>
+					<section data-background="images/unsplash-code.jpg">
+						<div class="custom_column">&nbsp;</div>
+						<div class="custom_column">
+							<h2>Several basic JS questions that I couldn't answer</h2>
+							<p class="fragment">I'm probably not alone</p>
+							<ul class="fragment">
+								<li>I'll answer a few</li>
+								<li>succinct explanation</li>
+								<li>real world application</li>
+								<!--<li>additional resources</li>-->
+							</ul>
+						</div>
 						<aside class="notes">
 							Reference again my use of frameworks libraries, etc. Goal is to provide some basic succinct explanation, some real world application. May be a bit rudimentary for some long time JS developers, but a good review nonetheless.
 						</aside>
 					</section>
-					<section>
+					<section data-background="images/unsplash-street.jpg">
 						<h2>Aren't interview questions stupid?</h2>
-						<p>&nbsp;</p>
-						<blockquote class="fragment">We are not paid to use every feature of the language. We are paid to write programs that work well<br> and are free of error<br> &mdash; Douglas Crockford</blockquote>
+						<p>
+							<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">my favorite Fizz Buzz answer is walking out of the interview</p>&mdash; Reid Draper (@reiddraper) <a href="https://twitter.com/reiddraper/status/798913241476923392">November 16, 2016</a></blockquote>
+							<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+						</p>
 						<aside class="notes">
 							well, yes. Fizzbuzz brings up a lot of emotions for developers. show quote. What's more important is what you can build, how focused you can be, and that you want to learn.<br> But try not to get hung up on the interview part. let's just learn!
 						</aside>
@@ -659,7 +666,7 @@ setTimeout(function() {
 							</ul>
 						</div>
 						<aside class="notes">
-							borrowed this image from MDN. JS is what is known as a Òsingle threadedÓ which basically means one thing at a time. As your JS is run, it handles one function at a time in the order in which they are called. It creates a LIFO stack of these called the call stack. While it is processing these things in order, the browser is effectively blocked (repaints, etc).
+							borrowed this image from MDN. JS is what is known as a ï¿½single threadedï¿½ which basically means one thing at a time. As your JS is run, it handles one function at a time in the order in which they are called. It creates a LIFO stack of these called the call stack. While it is processing these things in order, the browser is effectively blocked (repaints, etc).
 The task queue is another queue used by the browser to keep track of things that need to be executed. It is separate from the call stack. These are handled in the order in which they come in. Event loop waits on the stack to clear and then adds from the queue.
 						</aside>
 					</section>
