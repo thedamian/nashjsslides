@@ -55,6 +55,33 @@
             font-family: monospace;
         }
 
+        div.bio_box {
+            clear: both;
+            float: left;
+            width: 50%;
+            padding: 0 20px;
+        }
+
+        .bio_box img {
+            border-radius: 50%;
+        }
+
+        .bio_box .custom_column {
+            padding-top: 30px;
+            width: 66%;
+        }
+
+        .bio_box .custom_column:first-child {
+            width: 33%;
+            padding-top: 0;
+        }
+
+        .bio_box h4, .bio_box p {
+            text-align: left;
+            font-size: 0.6em;
+            margin: 5px 0;
+        }
+
 		.yellow {
 			color: #ffee11;
 		}
@@ -66,6 +93,10 @@
 		.avatar {
             border-radius: 50%;
             width: 100px;
+        }
+
+        .shadow {
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
         }
 
 		</style>
@@ -777,6 +808,20 @@ setTimeout(function() {
 					<h2>Just keep moving forward</h2>
 					<aside class="notes">that list can look pretty intimidating. reemphasize that it's not all about knowing every in and out of a language but building awesome things!</aside>
 				</section>
+
+                <section data-background="images/nashville.jpg">
+                    <h2><br><br><br><br></h2>
+                    <p class="shadow">http://russelljanderson.com/nashjsslides</p>
+                    <div class="bio_box">
+                        <div class="custom_column">
+                            <img src="images/gravatar.jpeg" alt="me looking like a douche">
+                        </div>
+                        <div class="custom_column">
+                            <h4>A talk by <a href="http://russelljanderson.com">Russell Anderson</a></h4>
+                            <p><a href="http://twitter.com/RealRealRuss">@RealRealRuss</a></p>
+                        </div>
+                    </div>
+                </section>
 			</div>
 
 		</div>
