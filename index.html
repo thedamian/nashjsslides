@@ -154,7 +154,7 @@
 							<li>mostly working within libraries and frameworks</li>
 						</ul>
 						<aside class="notes">
-							Bait and switch! can mention jquery and backbone, but don't get ahead of yourself here talking about limited JS knowledge, wait for HTML5 boilerplate<br><br>
+							Irony here about the bg image, I'd be completely screwed in the event of the apocalypse, wait for HTML5 boilerplate<br><br>
 							What's the inspiration for the talk?
 						</aside>
 					</section>
@@ -169,7 +169,7 @@
 							<h2>Brad Frost</h2>
 							<p><a href="//gist.github.com/bradfrost/59096a855281c433adc1" target="_blank">"Why I'm not a JavaScript developer."</a></p>
 						</div>
-						<aside class="notes">describe without clicking the link, he wrote this post in january, his answers to... (next slide)</aside>
+						<aside class="notes">describe without clicking the link, he wrote this post in january 2015, his answers to... (next slide)</aside>
 					</section>
 					<section>
 						<h2><img class="custom_transparent" src="images/html5boilerplate.jpg"></h2>
@@ -210,7 +210,7 @@
 						</aside>
 					</section>
 					<section data-background="images/unsplash-street.jpg">
-						<h2>Aren't interview questions stupid?</h2>
+						<h2>Are these questions relevant?</h2>
 						<p>
 							<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">my favorite Fizz Buzz answer is walking out of the interview</p>&mdash; Reid Draper (@reiddraper) <a href="https://twitter.com/reiddraper/status/798913241476923392">November 16, 2016</a></blockquote>
 							<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -409,7 +409,7 @@ function foo(){
 						<h3>3a) What needs to be changed to properly make it an IIFE?</h3>
 						<p>&nbsp;</p>
 						<pre class="fragment"><code data-trim>
-(function foo(){ })();
+( function foo(){ } )();
 						</code></pre>
 						<p>&nbsp;</p>
 						<p class="fragment">behold the parentheses</p>
@@ -417,22 +417,24 @@ function foo(){
 					</section>
 					<section>
 						<h3>Why would I ever use one?</h3>
-						<p class="fragment">Control variable scope<br><br></p>
-						<div class="fragment custom_column">
-							<img style="display: block; max-width: 50%; margin: 0 auto;" src="https://pbs.twimg.com/profile_images/492428538415292416/z7ZdiTuR.jpeg">
-							<p>
-								<small>Josh Mock<br>
-									<a href="http://tech.myemma.com/iifes-javascript-control-variable-scope/" target="_blank">http://tech.myemma.com/iifes-javascript-control-variable-scope/</a>
-								</small>
-							</p>
-						</div>
-						<div class="fragment custom_column">
-							<pre><code data-trim>
+						<div class="fragment">
+							<p class="">Control variable scope<br><br></p>
+							<div class=" custom_column">
+								<img style="display: block; max-width: 50%; margin: 0 auto;" src="https://pbs.twimg.com/profile_images/492428538415292416/z7ZdiTuR.jpeg">
+								<p>
+									<small>Josh Mock<br>
+										<a href="http://tech.myemma.com/iifes-javascript-control-variable-scope/" target="_blank">http://tech.myemma.com/iifes-javascript-control-variable-scope/</a>
+									</small>
+								</p>
+							</div>
+							<div class=" custom_column">
+								<pre><code data-trim>
 (function foo(){ })();
 
 console.log(foo);
-							</code></pre>
-							<blockquote>Firefox - ReferenceError: foo is not defined</blockquote>
+								</code></pre>
+								<blockquote>Firefox - ReferenceError: foo is not defined</blockquote>
+							</div>
 						</div>
 
 						<aside class="notes">Probably not a big deal if you're working within a framework, but I run into the need for this when I build simple websited. foo can't be called outside, leads to another great question</aside>
@@ -463,7 +465,7 @@ console.log(foo);
 					<section>
 						<h2>6) Explain "hoisting".</h2>
 						<p>&nbsp;</p>
-						<p class="fragment">all variables are declared at the top of any given function scope whether you like it or not (includes function declarations)</p>
+						<p class="fragment">all variables (var) are declared at the top of any given function scope whether you like it or not (includes function declarations)</p>
 						<aside class="notes">Gotta be one of my favorite code terms.</aside>
 					</section>
 					<section>
@@ -521,6 +523,7 @@ console.log(foo);
 12  }
 						</code></pre>
 						<p class="fragment">cue collective moan</p>
+						<aside class="notes">Not just vars but also functions written as statements are fully hoisted. Maybe jump back to that slide?</aside>
 					</section>
 					<!-- <section>
 						<h3>also, technically, this works</h3>
@@ -600,9 +603,8 @@ const quux;
 // "Missing initializer in const declaration"
 						</code></pre>
 						<ul class="fragment">
-							<li>variable exists but no defined value (not initialized)</li>
-							<li>object exists but without that key</li>
-							<li>array exists but nothing at index</li>
+							<li>variable declared but no defined value (not initialized)</li>
+							<li>object/array exists but nothing at that key/index</li>
 							<li>function exists but doesn't return anything</li>
 							<li>falsy</li>
 						</ul>
